@@ -2,28 +2,39 @@
   "name": "iridium",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9090/",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "@atlaskit/button": "^7.0.0",
+    "@atlaskit/field-text": "^5.0.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "2.0.0-next.b2fd8db8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "precommit": "pretty-quick staged",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom"
   },
   "browserslist": {
     "development": [
-      "last 2 chrome versions",
-      "last 2 firefox versions",
-      "last 2 edge versions"
+      "last 1 chrome versions",
+      "last 1 firefox versions",
+      "last 1 edge versions"
     ],
     "production": [
-      ">1%",
-      "last 4 versions",
-      "Firefox ESR",
-      "not ie < 11"
+      "last 1 chrome versions",
+      "last 1 firefox versions",
+      "last 1 edge versions"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.1",
+    "pretty-quick": "^1.4.1",
+    "source-map-explorer": "^1.5.0"
   }
 }
